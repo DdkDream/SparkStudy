@@ -24,5 +24,8 @@ object Executor {
     objIn.close()
     client.close()
     server.close()
+
+    val s: Int = 10
+
   }
 }
