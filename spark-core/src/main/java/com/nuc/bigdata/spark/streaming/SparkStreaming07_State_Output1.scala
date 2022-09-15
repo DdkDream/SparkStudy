@@ -24,12 +24,8 @@ object SparkStreaming07_State_Output1 {
                 (x: Int, y: Int) => {x - y},
                 Seconds(9), Seconds(3))
 
-        // foreachRDD不会出现时间戳
-        windowDS.foreachRDD(
-            rdd => {
-
-            }
-        )
+        // SparkStreaming如果没有输出操作，那么会提示错误
+        // windowDS.print()
 
         ssc.start()
         ssc.awaitTermination()
